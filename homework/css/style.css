@@ -19,13 +19,17 @@ body {
 	color: #333;
 	height: 200px;
 	background-image: linear-gradient(0deg, rgb(30, 138, 0), #82e30b);
+	
 }
  
-#grad1 {
-	height: 500px;
-	background-color: #ffffff;
-}
 
+#div1 {
+	border-radius: 10px;
+  	background-image:linear-gradient(to bottom, green, #5eab00);
+	border: 0.5px solid #b6f7df;
+	height: 40px;
+    margin: 30px 10px 20px 0px
+}
 
 
 
@@ -81,7 +85,21 @@ h5 {
 	color: #81ff70;
 	text-align: left;
 	font-weight: bold;
+	line-height: 3;
+
 }
+
+p.a {
+	font-size: 1.2em;
+	color: #ffffff;
+	text-align: middle;
+	font-weight: bold;
+	margin: 30px 0 60px 0;
+}
+
+
+
+
 
 p {
 	font-size: 1em;
@@ -153,7 +171,7 @@ the layout
 }
 
 #content {
-	float: right;
+	float: none;
 }
 
 #content h2 {
@@ -184,8 +202,16 @@ the layout
 
 
 #sidebar2 {
-	float: left;
+	
+	float: middle;
+	text-align: left;
 }
+#sidebar3 {
+	margin: 10px 0px 10px 0px;
+
+	
+}
+
 
 
 #port li {
@@ -195,8 +221,8 @@ the layout
 }
 
 #footer {
-	clear: both;
-	margin: 0 auto;
+	margin: 30px 0 40px 0;
 	text-align: center;
-	color: #000000;
+	color: #ffffff;
+	
 }
