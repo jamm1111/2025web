@@ -9,7 +9,7 @@ The font size here is set to 62.5% so that
 a little easier
 */
 body {
-	margin: 30px 50px 50PX 50px;
+	margin: 50px 50px 50PX 50px;
 	padding: 0;
 	/* background: #6e0427 url('../images/body_bg.gif') repeat-x top; */
 	background-image: linear-gradient(to bottom, #82e30b, rgb(30, 138, 0));
@@ -30,6 +30,15 @@ h1  {
 h2, p, ul, li {
 	margin: 0;
 	padding: 0;
+}
+
+
+h3{
+
+	font-size: 1.6em;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+	color: #fff;
 }
 
 p {
