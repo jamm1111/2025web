@@ -37,6 +37,8 @@ footer {
   color: white;
   text-align: center;
   padding: 50px;
+  border: 2px solid #0eac00;
+  border-style: solid none none none;
   }
 
 #div1 {
@@ -70,7 +72,7 @@ h2  {
 ul{
 	margin: 0;
 	padding: 0;
-	color: #1b0093;
+	color: #0e004a;
 }
 
 
@@ -124,12 +126,24 @@ p.a {
 	margin: 100px 0px 60px 0px;
 }
 
+p.b {
+	font-size: 1em;
+	line-height: 1.5em;
+	color:#000000;
+	
+}
 
+p.c {
+	font-size: 1em;
+	line-height: 1.5em;
+	color:#009600;
+	text-align: left;
+}
 
 p {
 	font-size: 1em;
 	line-height: 1.2em;
-	color:#000000
+	color:#000000;
 }
 
 ul {
@@ -137,7 +151,7 @@ ul {
 }
 
 a:link {
-	color: #001686;
+	color: #000c47;
 	font-size: 0.8em;
 	
 }
@@ -252,4 +266,14 @@ the layout
   position: relative;
   margin-top: -200px; 
   padding: 0px;
+}
+.link-green {
+  color: #00b300; 
+  text-decoration: none;
+  text-decoration: underline;
+}
+.link-blue {
+  color: #0c0049;
+  text-decoration: none;
+  text-decoration: underline;
 }
