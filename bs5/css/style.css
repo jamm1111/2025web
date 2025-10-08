@@ -10,7 +10,7 @@ a little easier
 */
 body {
 	margin: 0 auto;
-	width: 800px;
+	
 	padding: 0;
 	/* background: #6e0427 url('../images/body_bg.gif') repeat-x top; */
 	background-image: linear-gradient(to bottom, #681304b0, rgba(49, 2, 2,0.5));
@@ -35,7 +35,7 @@ ul {
 
 a:link {
 	color: #333;
-	background: #eee;
+	
 }
 a:visited {
 	color: #ff0000;
@@ -53,7 +53,7 @@ span.amp {
 #masthead {
 	margin: 0 auto ;
 	margin-top: 20px;
-	width: 800px;
+	
 	color: #fff;
 }
 
@@ -71,7 +71,7 @@ the layout
 	clear: both;
 	margin: 0 auto;
 	padding: 10px;
-	width: 800px;
+	
 	background: #fff;
 	border: 10px solid #5c0505;
 }
