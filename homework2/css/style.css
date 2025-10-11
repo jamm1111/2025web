@@ -238,6 +238,16 @@ h2{
        padding: 10px;
 	   border: 3px solid #9c9160;
        border-style: none none solid none;
+	   color: #a09e95;
+	}
+
+	.track4 {
+		background-image: linear-gradient(to bottom, #2b2925 , rgb(73, 73, 72));
+		border-radius: 15px;
+       padding: 10px;
+	   border: 3px solid #9c9160;
+       border-style: none none solid none;
+	   color: #ffe658;
 	}
 
 	.track3 {
