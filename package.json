@@ -1,0 +1,27 @@
+{
+  "name": "2025web",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/jamm1111/2025web#readme",
+  "bugs": {
+    "url": "https://github.com/jamm1111/2025web/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamm1111/2025web.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-fileupload": "^1.5.2",
+    "nedb-promises": "^6.2.3"
+  }
+}

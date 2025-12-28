@@ -1,0 +1,1 @@
+<svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020.52 85.18"><defs><style>.cls-1{fill:none;stroke:#000;stroke-miterlimit:10;}</style></defs><path class="cls-1" d="M138.5,420.5s81-84,213-84c112,0,103.71,81.89,280,84,167,2,142.58-81.68,278-77s141.26,83.54,249.13,76.77" transform="translate(-138.14 -336)"/></svg>

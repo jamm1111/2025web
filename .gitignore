@@ -1,0 +1,3 @@
+node_modules/
+*.db
+Public/img/*.mp4

@@ -1,0 +1,281 @@
+/*
+Red Lantern redesign
+HFWD Chapter 1
+*/
+
+/*
+The font size here is set to 62.5% so that
+1em = 10px. This makes adjusting our typography
+a little easier
+*/
+
+body {
+	
+	padding: 0;
+	/* background: #6e0427 url('../images/body_bg.gif') repeat-x top; */
+	background-color: #ffffff;
+	font-family: Helvetica, sans-serif;
+	font-size: 62.5%;
+	color: #333;
+	background-image: linear-gradient(to bottom, rgb(228, 228, 228), #ffffff);
+	
+}
+ 
+header {
+  background: linear-gradient(to bottom, #69bd14 30%, #2c8a00 100%);
+  color: white;
+  text-align: center;
+  padding: 50px;
+  border: 3px solid #ffffff;
+  border-style: none none solid none;
+  z-index: 1;
+  height: 400px;
+}
+
+footer {
+  background: linear-gradient(to bottom, #73bf10 20%, #3ba600 80%);
+  color: white;
+  text-align: center;
+  padding: 50px;
+  border: 2px solid #0eac00;
+  border-style: solid none none none;
+  }
+
+#div1 {
+	border-radius: 10px;
+  	background-image:linear-gradient(to bottom, green, #5eab00);
+	border: 0.5px solid #b6f7df;
+	height: 40px;
+    margin: 20px 10px 20px 0px
+}
+
+
+
+
+h1  {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: left;
+	color: #fff;
+
+	}
+
+h2  {
+	font-size: 2.5em;
+	margin: 0 0 px 0;
+	color: #0d6d00;
+	text-align: left;
+   }
+
+
+
+ul{
+	margin: 0;
+	padding: 0;
+	color: #0e004a;
+}
+
+
+li {
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+
+h3{
+
+	font-size: 1em;
+	font-weight: bold;
+	margin: 0 0 px 0;
+	color: #fff;
+	text-align: left;
+}
+
+
+h4 {
+	font-size: 1.5em;
+	color: #0d6d00;
+	text-align: left;
+}
+
+h5 {
+	font-size: 1.2em;
+	color: #81ff70;
+	text-align: left;
+	font-weight: bold;
+	line-height: 3;
+
+}
+
+h6{
+
+	font-size: 1em;
+	font-weight: bold;
+	color: #fff;
+	margin: 50px 100px 10px 50px;
+	text-align: left;
+	padding: 5px;
+}
+
+p.a {
+	font-size: 1.2em;
+	color: #ffffff;
+	text-align: middle;
+	font-weight: bold;
+	margin: 100px 0px 60px 0px;
+}
+
+p.b {
+	font-size: 1em;
+	line-height: 1.5em;
+	color:#000000;
+	
+}
+
+p.c {
+	font-size: 1em;
+	line-height: 1.5em;
+	color:#009600;
+	text-align: left;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.2em;
+	color:#000000;
+	
+}
+
+ul {
+	list-style-type: none;
+}
+
+a:link {
+	color: #000c47;
+	font-size: 0.8em;
+	
+}
+a:visited {
+	background: #eee;
+}
+
+/* This rule adds a nice style to our ampersands */
+span.amp {
+	font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
+	font-weight: normal;
+	font-style: italic;
+}
+
+ 
+#masthead {
+	margin: 0 auto ;
+	margin-top: 20px;
+	color: #fff;
+}
+
+#masthead h1 {
+	float: left;
+}
+
+
+/*
+Because the header content is outside the wrap <div>,
+we need to use the same "margin: 0 auto" trick to center
+the layout
+*/
+#mainContent {
+	clear: both;
+	margin: 0 auto;
+	padding: 10px;
+	background: #fff;
+
+}
+
+#header img {
+	border: 10px solid #ccc;
+}
+
+#header h1 {
+	font-size: 2em;
+	margin: 10px 0 0 0;
+	padding: 10px;
+	text-align: center;
+	background: url('../images/tagline_bg.gif') repeat-x;
+}
+
+#content, #sidebar {
+	width: 360px;
+	margin: 20px 0 20px 0;
+	padding: 10px;
+}
+
+#content {
+	float: none;
+}
+
+#content h2 {
+	font-size: 2.4em;
+	margin: 0 0 10px 0;
+}
+
+#content p {
+	margin: 0 0 10px 0;
+}
+
+#link-list {
+	margin: 20px 0 0 0;
+	font-size: 1.4em;
+	
+}
+
+#link-list li {
+	margin: 0 0 10px 20px;
+}
+
+#sidebar {
+	margin: 0 80px 10px 20px;
+	background: #f9f9f9;
+	padding: auto;
+	height: 400px;
+}
+
+
+#sidebar2 {
+	
+	float: middle;
+	text-align: left;
+}
+
+
+#sidebar3 {
+	margin: 30px 0px 100px 0px;
+
+	
+}
+
+
+
+#port li {
+	margin: 0 10px 20px 0;
+	float: left;
+	border: 5px solid #ddd;
+}
+
+ .banner {
+  border: 10px solid #ffffff;
+  position: relative;
+  margin-top: -200px; 
+  padding: 0px;
+}
+.link-green {
+  color: #00b300; 
+  text-decoration: none;
+  text-decoration: underline;
+  
+}
+.link-blue {
+  color: #0c0049;
+  text-decoration: none;
+  text-decoration: underline;
+}
