@@ -416,16 +416,16 @@ tl.to("#video", {
 
 
 //3d animation
-const Tl = gsap.timeline({
+const threeDTl = gsap.timeline({
   scrollTrigger: {
-    trigger: "#3dContainer",
+    trigger: "#threeDContainer",
     start: "top bottom",
     end: "bottom top",
     scrub: true
   }
 });
 
-Tl
+threeDTl
   .fromTo("#3D", { x: "-100vw" }, { x: "0vw" })
   .to("#3D", { x: "0vw", duration: 1 })
   .to("#3D", { x: "100vw" });
@@ -437,7 +437,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const imgTl = gsap.timeline({
   scrollTrigger: {
-    trigger: "#2DContainer",
+    trigger: "#twoDContainer",
     start: "top bottom",
     end: "bottom top",
     scrub: true
