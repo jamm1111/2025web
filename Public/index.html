@@ -416,7 +416,7 @@ tl.to("#video", {
 
 
 //3d animation
-const videoTl = gsap.timeline({
+const Tl = gsap.timeline({
   scrollTrigger: {
     trigger: "#3dContainer",
     start: "top bottom",
@@ -425,10 +425,10 @@ const videoTl = gsap.timeline({
   }
 });
 
-videoTl
-  .fromTo("#3d", { x: "-100vw" }, { x: "0vw" })
-  .to("#3d", { x: "0vw", duration: 1 })
-  .to("#3d", { x: "100vw" });
+Tl
+  .fromTo("#3D", { x: "-100vw" }, { x: "0vw" })
+  .to("#3D", { x: "0vw", duration: 1 })
+  .to("#3D", { x: "100vw" });
 
 
 
@@ -437,7 +437,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const imgTl = gsap.timeline({
   scrollTrigger: {
-    trigger: "#2dContainer",
+    trigger: "#2DContainer",
     start: "top bottom",
     end: "bottom top",
     scrub: true
@@ -445,19 +445,19 @@ const imgTl = gsap.timeline({
 });
 
 // 左 → 中
-imgTl.fromTo("#2d",
+imgTl.fromTo("#2D",
   { x: "-100vw" },
   { x: "0vw" }
 );
 
 // 中間停
-imgTl.to("#2d", {
+imgTl.to("#2D", {
   x: "0vw",
   duration: 0.5  
 });
 
 // 中 → 右
-imgTl.to("#2d", {
+imgTl.to("#2D", {
   x: "100vw"
 });
 
