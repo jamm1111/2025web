@@ -44,7 +44,7 @@
                     <li>
                         <a class=" ms-3" href="#twoDContainer">Portfolio</a>
                     </li>
-                    <li>
+                    <li> 
                         <a class=" ms-3" href="#about">About me</a>
                     </li>
 
@@ -80,14 +80,20 @@
             <div class="col-lg-12 mb-4">
                 <a href="2d.html" class=" btn btn-xl">2D Character ⇦</a>
             </div>
-            <div v-for="item in TwoD" class=" col-md-4 gallery">
+
+            <div v-for="item in TwoD" class=" col-md-4 gallery" id="2D">
                 <img :src="item.imgSrc">
+<<<<<<< HEAD
                 <h3 class="section-subheading text-muted"> </h3>
+=======
+                <h3 class="section-subheading text-muted"> {{item.text}} </h3>
+
+>>>>>>> 9f9f515459fee8f79d40c55cfe9b68fb0da32449
             </div>
 
 
 
-             <div class=" col-md-4 gallery">
+              <!-- <div class=" col-md-4 gallery">
                 <img src="img/插圖105.jpg" alt="">
                 <h3 class="section-subheading text-muted">Character Design and Illustration</h3>
             </div>
@@ -99,7 +105,7 @@
             <div class=" col-md-4 gallery">
                 <img src="img/插圖86.jpg" alt="">
                 <h3 class="section-subheading text-muted">Character Design and Illustration</h3>
-            </div> 
+            </div> -->
         </div>
 
 
@@ -108,14 +114,14 @@
                 <a href="#services" class=" btn btn-xl">3D Modeling ⇦</a>
             </div>
 
-            <div v-for="item in ThreeD" :class="['gallery', item.class]">
+            <div v-for="item in ThreeD" :class="['gallery', item.class]" id="3D">
                 <img :src="item.imgSrc">
                 <h3 class="section-subheading text-muted"> </h3>
             </div>
 
 
 
-            <div class=" col-md-4 gallery">
+           <!--<div class=" col-md-4 gallery">
                 <img src="img/3D_03.png" alt="">
                 <h3 class="section-subheading text-muted">3D Modeling of a Knife.</h3>
             </div>
@@ -129,29 +135,31 @@
                 <img src="img/渲染01(1.jpg" alt="">
                 <h3 class="section-subheading text-muted">Gas Station Scene Creation.</h3>
             </div>
-             
+             -->
         </div>
 
 
 
-        <div class="row text-center">
+        <div class="row text-center" id="videoContainer">
             <div class="col-lg-12 mb-4">
                 <a href="#services" class=" btn btn-xl">Animation ⇦</a>
 
             </div>
-
-            <div class=" col-md-6 gallery">
+         
+            <div class=" col-md-6 gallery" id="video">
                 <video width="100%" controls loop>
-                    <source src="img/s1411222012_my_own_Goong_moving.mp4" type="video/mp4">
+                    <source src="img/video01.mp4" type="video/mp4">
                 </video>
                 <h3 class="section-subheading text-muted">my 3d animation.</h3>
             </div>
-            <div class=" col-md-6 gallery">
+            <div class=" col-md-6 gallery" id="video">
                 <video width="100%" controls loop>
-                    <source src="img/最終!.mp4" type="video/mp4">
+                    <source src="img/video02.mp4" type="video/mp4">
                 </video>
                 <h3 class="section-subheading text-muted">my 2d animation.</h3>
             </div>
+
+          
         </div>
     </section>
 
@@ -317,7 +325,7 @@
 <!-- Gsap script-->
 <script>
     ScrollTrigger.defaults({
-        markers: false
+        markers: true
     });
 
 
@@ -380,6 +388,83 @@
         },
         rotation: 360, duration: 3
     });
+
+//video animation
+gsap.registerPlugin(ScrollTrigger);
+
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#videoContainer",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
+// 左 → 中
+tl.fromTo("#video",
+  { x: "-100vw" },
+  { x: "0vw" }
+);
+
+// 中間停
+tl.to("#video", {
+  x: "0vw",
+  duration: 0.5  
+});
+
+// 中 → 右
+tl.to("#video", {
+  x: "100vw"
+});
+
+
+//3d animation
+const threeDTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#threeDContainer",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
+threeDTl
+  .fromTo("#3D", { x: "-100vw" }, { x: "0vw" })
+  .to("#3D", { x: "0vw", duration: 1 })
+  .to("#3D", { x: "100vw" });
+
+
+
+//2d animation
+gsap.registerPlugin(ScrollTrigger);
+
+const imgTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#twoDContainer",
+    start: "top bottom",
+    end: "bottom top",
+    scrub: true
+  }
+});
+
+// 左 → 中
+imgTl.fromTo("#2D",
+  { x: "-100vw" },
+  { x: "0vw" }
+);
+
+// 中間停
+imgTl.to("#2D", {
+  x: "0vw",
+  duration: 0.5  
+});
+
+// 中 → 右
+imgTl.to("#2D", {
+  x: "100vw"
+});
+
 
 </script>
 
