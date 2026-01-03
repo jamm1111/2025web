@@ -116,6 +116,7 @@
                 <a href="model.html">3D Gallery</a>
                
             </div>
+            
             <div v-for="item in ThreeD" :class="['gallery', item.class]" id="threeD">
                 <img :src="item.imgSrc">
                 <h3 class="section-subheading text-muted"> {{item.text}}</h3>

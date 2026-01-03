@@ -10,7 +10,9 @@ const scene = new THREE.Scene();
 //create a new camera with positions and angles
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-
+//Keep track of the mouse position, so we can make the eye move
+let mouseX = window.innerWidth / 2;
+let mouseY = window.innerHeight / 2;
 
 //Keep the 3D object on a global variable so we can access it later
 let object;
@@ -19,7 +21,7 @@ let object;
 let controls;
 
 //Set which object to render
-let objToRender = 'eye';
+let objToRender = 'dino';
 
 //Instantiate a loader for the .gltf file
 const loader = new GLTFLoader();
