@@ -81,11 +81,11 @@
 
 
         <div class="row text-center" id="twoDContainer">
-            <div class="col-lg-12 mb-4">
+            <div class="col-lg-12 mb-4" id="twoD">
                 <a href="2d.html" class=" btn btn-xl"><img src="img/star.gif" alt="gif">2D Character ⇦</a>
             </div>
 
-            <div v-for="item in TwoD" class=" col-md-4 gallery" id="twoD">
+            <div v-for="item in TwoD" class=" col-md-4 gallery"id="twoD">
                 <img :src="item.imgSrc">
                 <h3 class="section-subheading text-muted"> {{item.text}} </h3>
 
@@ -112,7 +112,7 @@
             <div class="col-lg-12 mb-4">
                 <a href="#services" class=" btn btn-xl"><img src="img/star.gif" alt="gif">3D Modeling ⇦</a>
             </div>
-            <div class="hero">
+            <div class="hero" id="threeD">
                 <a href="model.html"><img src="img/red.gif" alt="gif">3D Gallery</a>
                
             </div>
@@ -144,7 +144,7 @@
 
 
         <div class="row text-center" id="videoContainer">
-            <div class="col-lg-12 mb-4">
+            <div class="col-lg-12 mb-4" id="video">
                 <a href="#services" class=" btn btn-xl"><img src="img/star.gif" alt="gif">Animation ⇦</a>
 
             </div>
@@ -183,15 +183,16 @@
                 </svg>
                 <h2 class="section-heading"><img src="img/mark.gif" alt="gif">About me<img src="img/mark.gif" alt="gif"></h2>
 
-                <div class="row text-center">
-                    <div class="aboutthing col-md-4">
+                <div class="row text-center" >
+                    <div class="aboutthing col-md-4" id="words">
                         <img id="icon" src="img/02.png" alt="">
-                        <div class="horizontal-line"></div>
+                        <div class="horizontal-line" ></div>
                         <h3 class="section-text text-muted">Study</h3>
                         <p>Studied at National Taichung University of Science and Technology.</p>
+                        
                     </div>
 
-                    <div class="aboutthing col-md-4">
+                    <div class="aboutthing col-md-4" id="words">
                         <img id="icon" src="img/03.png" alt="">
                         <div class="horizontal-line"></div>
                         <h3 class="section-text text-muted">Work Experience</h3>
@@ -211,7 +212,7 @@
                     </div>
 
 
-                    <div class="aboutthing col-md-4">
+                    <div class="aboutthing col-md-4" id="words">
                         <img id="icon" src="img/01.png" alt="">
                         <div class="horizontal-line"></div>
                         <h3 class="section-text text-muted">Positions Held</h3>
@@ -478,6 +479,35 @@
 
     // 中 → 右
     tl3.to("#threeD", {
+        x: "100vw"
+    });
+
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const t4 = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#icon",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+
+    // 左 → 中
+    t4.fromTo("#words",
+        { x: "-100vw" },
+        { x: "0vw" }
+    );
+
+    // 中間停
+    t4.to("#words", {
+        x: "0vw",
+        duration: 0.5
+    });
+
+    // 中 → 右
+    t4.to("#words", {
         x: "100vw"
     });
 
