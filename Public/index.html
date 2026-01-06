@@ -65,8 +65,10 @@
         <img id="bg" src="img/bg.jpg">
         <h1 id="title">
             Chan Pin Chun<br>
-            Portfolio
+            Portfolio<img src="img/icon.gif" alt="gif" >
+            
         </h1>
+        
         <img id="man" src="img/people.png">
 
     </header>
@@ -181,13 +183,13 @@
                         d="M138.5,420.5s81-84,213-84c112,0,103.71,81.89,280,84,167,2,142.58-81.68,278-77s141.26,83.54,249.13,76.77"
                         transform="translate(-138.14 -336)" />
                 </svg>
-                <h2 class="section-heading"><img src="img/mark.gif" alt="gif">About me<img src="img/mark.gif" alt="gif"></h2>
+                <h2 class="section-heading" id="aboutme"><img src="img/mark.gif" alt="gif">About me<img src="img/mark.gif" alt="gif"></h2>
 
                 <div class="row text-center" >
                     <div class="aboutthing col-md-4" id="words">
                         <img id="icon" src="img/02.png" alt="">
                         <div class="horizontal-line" ></div>
-                        <h3 class="section-text text-muted">Study</h3>
+                        <h3 class="section-text text-muted"><img src="img/hand2.gif" alt="gif">Study</h3>
                         <p>Studied at National Taichung University of Science and Technology.</p>
                         
                     </div>
@@ -195,7 +197,7 @@
                     <div class="aboutthing col-md-4" id="words">
                         <img id="icon" src="img/03.png" alt="">
                         <div class="horizontal-line"></div>
-                        <h3 class="section-text text-muted">Work Experience</h3>
+                        <h3 class="section-text text-muted"><img src="img/hand2.gif" alt="gif" >Work Experience</h3>
                         <p>Sign Language Industry–Academia Collaboration Project</p>
 
                         <p>Part-time Assistant and Temporary Staff for the Ministry of Education Subsidy Project</p>
@@ -215,7 +217,7 @@
                     <div class="aboutthing col-md-4" id="words">
                         <img id="icon" src="img/01.png" alt="">
                         <div class="horizontal-line"></div>
-                        <h3 class="section-text text-muted">Positions Held</h3>
+                        <h3 class="section-text text-muted"><img src="img/hand2.gif" alt="gif">Positions Held</h3>
                         <p>2023–2024 Academic Year — Student Association Design Department Staff</p>
                         <p>2025 Academic Year — Department Student Association Visual Design Member</p>
                     </div>
@@ -241,7 +243,7 @@
             </div>
 
 
-            <div class="row ">
+            <div class="row " id="contactme">
 
                 <div class="col-md-6 mb-4">
                     <div id="map" class="mb-3"></div>
@@ -251,7 +253,7 @@
 
 
 
-                <div class="col-md-6 ">
+                <div class="col-md-6 " id="contactme">
                     <form name="sentMessage" id="contactForm" action="/contact" method="POST"
                         enctype="multipart/form-data">
                         <div class="row">
@@ -293,7 +295,7 @@
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
 
-                                <button type="submit" class="btn btn-x2 ">Send Message</button>
+                                <button type="submit" class="btn btn-x2 ">Send Message<img src="img/smile.gif" alt="gif"></button>
                             </div>
                         </div>
                     </form>
@@ -365,6 +367,14 @@
         }, y: 150, duration: 3
     });
 
+gsap.to("#aboutme", {
+        scrollTrigger: {
+            trigger: "#words",
+            start: "top 500px",
+            end: "top 400px",
+            scrub: 3,
+        }, y: -250, duration: 1
+    }); 
 
     gsap.to("#box", {
         duration: 3,
@@ -482,7 +492,7 @@
         x: "100vw"
     });
 
-
+//about me animation
     gsap.registerPlugin(ScrollTrigger);
 
     const t4 = gsap.timeline({
@@ -510,6 +520,33 @@
     t4.to("#words", {
         x: "100vw"
     });
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+    const t5 = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#map",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+
+    // 左 → 中
+    t5.fromTo("#contactme",
+        { x: "-100vw" },
+        { x: "0vw" }
+    );
+
+    // 中間停
+    t5.to("#contactme", {
+        x: "0vw",
+        duration: 0.5
+    });
+
+    
 
 
 </script>

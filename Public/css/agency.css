@@ -101,7 +101,12 @@ header img {
   z-index: 10;
   text-align: right;
 }
-
+#title img {
+  width: 40px;
+  height: 40px;
+  margin-left: 170px;
+  margin-top: 80px;
+}
 #my {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
@@ -113,7 +118,11 @@ header img {
   color: #ececec;
   background: #2e2f30;
 }
-
+#words h3 img {
+  width: 30px;
+ height: 30px;;
+  margin: 10px;
+}
 .myportfolio img {
   width: 40px;
  height: 40px;;
