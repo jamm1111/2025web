@@ -2,18 +2,30 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>A simple Three.JS App</title>
+    <title>3D Model Gallery</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   </head>
   <body>
     <header>
-      <h1>3D Gallery</h1>
+      <h1><img src="img/star3.gif" alt="gif">3D Gallery<img src="img/star3.gif" alt="gif"></h1>
+      <a href="index.html">BACK</a>
     </header>
 
     <main>
       <div id="container3D"></div>
     </main>
- <a href="index.html">BACK</a>
+<model-viewer 
+    src="models/dino/scene.gltf" 
+    alt="3D Model" 
+    camera-controls 
+    auto-rotate
+    auto-rotate-delay="0"
+    rotation-per-second="30deg">
+</model-viewer>
+
+    
+ 
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
